@@ -5,6 +5,7 @@ En ambos ejercicios he adjuntado 2 imágenes.
 Para conectar con ssh simplemente he configurado ambas tarjetas de red en primer lugar, luego he usado el comando en una de las máquinas:
 $> ssh 192.168.1.100
 Y he tenido que introducir la contraseña de la máquina a la que me conecto.
+([imagen]https://github.com/Mxgang/Practicas-SWAP/blob/master/practica1/Demostracion%20Curl.png?raw=true)
 
 **---------Ejercicio curl**
 
