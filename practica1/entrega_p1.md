@@ -7,7 +7,7 @@ En la configuración de /etc/network/interfaces he puesto lo siguiente:
 
 auto enp0s9
 
-ifacce enp0s9 inet static
+iface enp0s9 inet static
 
 address 192.168.1.100
 
