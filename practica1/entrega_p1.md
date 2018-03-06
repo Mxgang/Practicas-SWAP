@@ -1,4 +1,5 @@
 **--------Configuración previa**
+
 He usado 2 máquinas de Ubuntu Server, donde le he instalado LAMP y openSSH.
 En ambas le he puesto 2 adaptadores de red, una de NAT y otra de red Interna, donde en la red Interna ambas tiene el mismo nombre.
 
