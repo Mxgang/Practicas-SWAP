@@ -5,7 +5,7 @@ En ambas le he puesto 2 adaptadores de red, una de NAT y otra de red Interna, do
 
 En la configuración de /etc/network/interfaces he puesto lo siguiente:
 
-auto enp0s9
+*auto enp0s9
 
 ifacce enp0s9 inet static
 
@@ -15,7 +15,7 @@ netmask 255.2555.255.0
 
 network 192.168.1.0
 
-broadcast 192.168.1.255
+broadcast 192.168.1.255*
 
 
 En la segunda máquina he puesto lo mismo salvo en address que ha sido 192.168.1.101
