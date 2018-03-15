@@ -8,6 +8,7 @@ $>tar czf - hola.txt | ssh 192.168.1.101 'cat > ~/tar.tgz'
 
 Básicamente he comprimido el archivo "hola.txt" que tenía y lo he mandado a la máquina de IP 192.168.1.101 mediante ssh teniendo que introducir la contraseña, el archivo comprimido se envía al directorio raiz.
 
+![img](https://i.imgur.com/hb3fNsJ.png)
 
 **2. Clonado de una carpeta entre las dos máquinas**
 
@@ -16,6 +17,8 @@ En la máquina 2 he creado la carpeta prueba y he puesto el comando:
 $> rsync -avz -e ssh 192.168.1.100:/home/hulidex/prueba/ /home/hulidex/prueba/
 
 Con eso en la carpeta prueba de la máquina 2 ha recibido el contenido que había en la máquina 1, que es el archivo "práctica2.txt"
+
+![img](https://i.imgur.com/zy1BX0l.png)
 
 **3. Configuración de ssh para acceder sin que solicite contraseña**
 
@@ -31,3 +34,4 @@ $> ssh-copy-id 192.168.1.100
 
 Haciendo ssh hacia la máquina1 se puede ver que podemos meternos sin contraseña
 
+![img](https://i.imgur.com/R8yuSxE.png)
