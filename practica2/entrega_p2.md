@@ -35,3 +35,11 @@ $> ssh-copy-id 192.168.1.100
 Haciendo ssh hacia la máquina1 se puede ver que podemos meternos sin contraseña
 
 ![img](https://i.imgur.com/R8yuSxE.png)
+
+**4. Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas**
+
+Para realizar esto nos dirigimos en la máquina 2 (la esclava) al archivo /etc/crontab e incluimos una línea nueva:
+
+$> * */1 * * * root rsync -avz -e ssh 192.168.1.100:/var/www/ /var/www/
+
+Con esto se clonará el contenido de var/www de la máquina maestra a la máquina esclava cada hora.
