@@ -28,7 +28,7 @@ Con la máquina del cliente hacemos curl al balanceador para ver que funciona, t
 
 ![img](https://i.imgur.com/coj7bVf.png)
 
-**Opcional. COnfigurar una máquina e instalar Pound como balanceador de carga**
+**Opcional. Configurar una máquina e instalar Pound como balanceador de carga**
 Para probar otro balanceador decidí instalar Pound con el comando "apt-get install Pound".
 La configuración fue simple, fui al archivo de configuración situado en /etc/Pound y puse los puertos e ips al igual que en los balanceadores anteriores. En la siguiente imagen se muestra el archivo ya configurado:
 
@@ -50,4 +50,4 @@ Voy ejecutando el comando "ab -n 1000 -c 10 http://192.168.1.102/index.html" con
  ![img](https://i.imgur.com/F3aEQHu.png)
  
 - Pound
-  ![img](https://imgur.com/552k6yG)
+  ![img](https://imgur.com/552k6yG.png)
