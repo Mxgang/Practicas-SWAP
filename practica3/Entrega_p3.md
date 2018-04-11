@@ -18,3 +18,13 @@ He modificado el contenido de index.html en el servidor 1 y en el servidor 2 y y
 En la máquina del cliente he hecho un curl al balanceador: curl http://192.168.1.102 y me ha mostrado satisfactoriamente el contenido de index.html del servidor 1 y 2 como muestro en la siguiente imagen:
 
 ![img](https://i.imgur.com/LIdaK04.png)
+
+**2. Configurar una máquina e instalar el haproxy como balanceador de carga**
+
+Se instala haproxy con el comando "apt-get install haproxy" En su archivo de configuración situado en /etc/haproxy/ hay que poner el contenido que había en el guión junto con las ip de los servidores.
+Una vez hecho, antes de lanzar el servicio, com probamos que no hay otro servicio usando el puerto 80, una vez comprobado, lanzamos el servicio con "systemctl start haproxy".
+
+Con la máquina del cliente hacemos curl al balanceador para ver que funciona, tal y como muestra la siguiente imagen
+
+![img](https://i.imgur.com/coj7bVf.png)
+
