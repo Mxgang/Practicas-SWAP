@@ -28,3 +28,26 @@ Con la máquina del cliente hacemos curl al balanceador para ver que funciona, t
 
 ![img](https://i.imgur.com/coj7bVf.png)
 
+**Opcional. COnfigurar una máquina e instalar Pound como balanceador de carga**
+Para probar otro balanceador decidí instalar Pound con el comando "apt-get install Pound".
+La configuración fue simple, fui al archivo de configuración situado en /etc/Pound y puse los puertos e ips al igual que en los balanceadores anteriores. En la siguiente imagen se muestra el archivo ya configurado:
+
+![img](https://i.imgur.com/6b8vfT7.png)
+
+Inicio el proceso con "systemctl start pound" (comprobando previamente que el puero 80 esté libre) y hago curl en la máquina cliente:
+
+![img](https://i.imgur.com/xlTzM75.png)
+
+**3. Someter a la granja web a una alta carga, generada con la herramienta Apache Benchmark, teniendo primero nginx y después haproxy.**
+
+Aquí comparo los 3 balanceadores de carga usando el Benchmark de Apache que ya tenía instalado en la máquina de cliente.
+Voy ejecutando el comando "ab -n 1000 -c 10 http://192.168.1.102/index.html" con cada servicio (Nginx, haproxy y Pound) y me salen 3 tiempos distintos, en las siguientes capturas se podrá distinguir el Benchmark de cada servicio
+
+- Nginx
+  ![img](https://i.imgur.com/4yaylIw.png)
+  
+- haproxy
+ ![img](https://i.imgur.com/F3aEQHu.png)
+ 
+- Pound
+  ![img](https://imgur.com/552k6yG)
