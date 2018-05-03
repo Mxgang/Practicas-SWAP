@@ -12,8 +12,8 @@ Luego hacemos un rsync para copiar los certificados a la otra máquina servidora
 
 A continuación, en la máquina balanceadora nos dirigimos al archivo de configuración de Nginx situado en /etc/nginx/conf.d/default.conf y añadimos las líneas oportunas para que funcione con SSL, dicha configuración está en la siguiente captura de pantalla:
 
-![img](https://imgur.com/ICI28Pk)
+![img](https://i.imgur.com/ICI28Pk.png)
 
 Una vez hecho esto activamos el puerto 443 con "ufw allow 443" en todas las máquinas. Vamos a la máquina de cliente y hacemos el curl al balanceador para comprobar que funciona
 
-![img](https://imgur.com/bMYGXA7)
+![img](https://i.imgur.com/bMYGXA7.png)
