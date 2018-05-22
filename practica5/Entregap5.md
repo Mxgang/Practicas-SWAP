@@ -49,7 +49,7 @@ Creamos el archivo de seguridad con el comando "mysqldump ejemplodb -u root -p >
 **3. Restaurar dicha copia de seguridad en la segunda máquina (clonado manual
 de la BD), de forma que en ambas máquinas esté esa BD de forma idéntica.**
 
-En la máquina esclava ponemos lo siguiente: "scp maquina1:/tmp/ejemplodb.sql /tmp/". Como podemos ver, la BD es idéntica a la maestra
+En la máquina esclava ponemos lo siguiente: "scp maquina1:/tmp/ejemplodb.sql /tmp/". Luego creamos la base de datos con el mismo nombre que la de la maestra y restauramos los datos del archivo de la BD con el comando "sql -u root -p ejemplodb < /tmp/ejemplodb.sql". Como podemos ver, la BD es idéntica a la maestra
 ![img](https://i.imgur.com/MldTncK.png)
 
 **4. Realizar la configuración maestro-esclavo de los servidores MySQL para que la
